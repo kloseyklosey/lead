@@ -1,0 +1,285 @@
+<%- include('partials/head') -%>
+
+
+
+<body class=" my-color my-auto mx-auto bg-gradient-to-b from-blue-200 to-green-300 w-full py-2 px-4">
+
+        
+          <form id="login" action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <div class="bg-white dark:bg-gray-800">
+              <div class="container mx-auto bg-white dark:bg-gray-800 rounded">
+                  <div class="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5 bg-white dark:bg-gray-800">
+                      <div class="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center">
+                          <p class="text-lg text-gray-800 dark:text-gray-100 font-bold">Candidate Profile</p>
+                          <div class="ml-2 cursor-pointer text-gray-600 dark:text-gray-400">
+                              <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4.svg" alt="info">
+                              <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4dark.svg" alt="info">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mx-auto">
+                     <div class="xl:w-9/12 w-11/12 mx-auto xl:mx-0">
+                           <div class="rounded relative mt-8 h-48">
+                              <img src="https://cdn.tuk.dev/assets/webapp/forms/form_layouts/form1.jpg" alt="" class="w-full h-full object-cover rounded absolute shadow" />
+                              <div class="absolute bg-black opacity-50 top-0 right-0 bottom-0 left-0 rounded"></div>
+                             
+                              <!-- <div class="w-20 h-20 rounded-full bg-cover bg-center bg-no-repeat absolute bottom-0 -mb-10 ml-12 shadow flex items-center justify-center">
+                                  <img src="https://cdn.tuk.dev/assets/webapp/forms/form_layouts/form2.jpg" alt="" class="absolute z-0 h-full w-full object-cover rounded-full shadow top-0 left-0 bottom-0 right-0" />
+                                  <div class="absolute bg-black opacity-50 top-0 right-0 bottom-0 left-0 rounded-full z-0"></div>
+                                  <div class="cursor-pointer flex flex-col justify-center items-center z-10 text-gray-100">
+                                      <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg1.svg" alt="Edit">
+                                      <p class="text-xs text-gray-100">Edit Picture</p>
+                                  </div>
+                              </div>  -->
+                          </div>
+                         <!-- <div class="mt-16 flex flex-col xl:w-2/6 lg:w-1/2 md:w-1/2 w-full">
+                              <label for="username" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Username</label>
+                              <input tabindex="0" type="text" id="username" name="username" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="@example" />
+                          </div>
+                          <div class="mt-8 flex flex-col xl:w-3/5 lg:w-1/2 md:w-1/2 w-full">
+                              <label for="about" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">About</label>
+                              <textarea id="about" name="about" required class="bg-transparent border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 resize-none placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="Let the world know who you are" rows="5"></textarea>
+                              <p class="w-full text-right text-xs pt-1 text-gray-600 dark:text-gray-400">Character Limit: 200</p>
+                          </div>
+                      </div> -->
+                  </div>
+              </div>
+              <div class="container mx-auto  bg-gradient-to-b from-blue-200 to-gray-100   mt-10 rounded px-4">
+                  <!-- <div class="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5">
+                      <div class="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center">
+                          <p class="text-lg text-gray-800 dark:text-gray-100 font-bold">Personal Information</p>
+                          <div class="ml-2 cursor-pointer text-gray-600 dark:text-gray-400">
+                              <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4.svg" alt="info">
+                              <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4dark.svg" alt="info">
+                          </div>
+                      </div>
+                  </div> -->
+
+                  <div class="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5 flex justify-center items-center">
+                    <div class="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center justify-center">
+                        <p class="text-lg text-gray-800 dark:text-gray-100 font-bold">Personal Information</p>
+                        <div class="ml-2 cursor-pointer text-gray-600 dark:text-gray-400">
+                            <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4.svg" alt="info">
+                            <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4dark.svg" alt="info">
+                        </div>
+                    </div>
+                  </div>
+                
+                  <div class="mx-auto pt-4">
+                      <div class="container mx-auto">
+                          <form class="my-6 w-11/12  xl:w-full xl:mx-0">
+                              <!-- <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6 flex ">
+                                  <label for="FirstName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">First Name</label>
+                                  <input tabindex="0" type="text" id="FirstName" name="firstName" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="" />
+                              </div> -->
+                              <div class="flex items-center justify-center">
+                                <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                    <label for="FirstName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">First Name</label>
+                                    <input tabindex="0" type="text" id="FirstName" name="firstName" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="" />
+                                </div>
+                            </div>
+                            
+                            
+                              <!-- <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="middleName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Middle Name</label>
+                                <input tabindex="0" type="text" id="middleName" name="middleName" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="" />
+                              </div> -->
+                              <div class="flex items-center justify-center">
+                                <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                    <label for="middleName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Middle Name</label>
+                                    <input tabindex="0" type="text" id="middleName" name="middleName"  class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="" />
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                  <label for="LastName" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Last Name</label>
+                                  <input tabindex="0" type="text" id="LastName" name="lastName" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="" />
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="Email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
+                                <div class="border border-green-400 shadow-sm rounded flex">
+                                    <div tabindex="0" class="focus:outline-none px-4 py-3 dark:text-gray-100 flex items-center border-r border-green-400">
+                                        <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg2.svg" alt="mail">
+                                        <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg2dark.svg" alt="mail">
+                                    </div>
+                                    <input tabindex="0" type="text" id="Email" name="email" required class="pl-3 py-3 w-full text-sm focus:outline-none placeholder-gray-500 rounded bg-transparent text-gray-600 dark:text-gray-400" placeholder="example@gmail.com" />
+                                </div> 
+                              </div>
+                            </div>
+
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="phone" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Phone</label>
+                                <input tabindex="0" type="text" id="phone" name="phone" class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="123-456-7890" required />
+                              </div>
+
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="socials" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">S-S-N</label>
+                                <input tabindex="0" type="text" id="socials" name="socials" required  class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="" required />
+                              </div>
+
+                            </div>
+                              
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="StreetAddress" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Street Address</label>
+                                <input tabindex="0" type="text" id="street" name="street" required class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded bg-transparent text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="" />
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="appt" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Flat / Appt #</label>
+                                <input tabindex="0" type="text" id="appt" name="appt"  class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded bg-transparent text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="Flat #/ Appt #" />
+                              </div>
+
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="city" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">City</label>
+                                <div class="border border-gray-300 dark:border-gray-700 shadow-sm rounded flex">
+                                    <input tabindex="0" type="text" id="city" name="city" required class="pl-3 py-3 w-full text-sm focus:outline-none border border-transparent focus:border-indigo-700 bg-transparent rounded placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="City" />
+                                    <div class="px-4 flex items-center border-l border-gray-300 dark:border-gray-700 flex-col justify-center text-gray-600 dark:text-gray-400">
+                                       <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg5.svg" alt="up">
+                                       <img class="dark:hidden transform rotate-180" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg5.svg" alt="down">
+                                       <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg5dark.svg" alt="up">
+                                       <img class="dark:block hidden transform rotate-180" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg5dark.svg" alt="down">
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="state" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">State/Province</label>
+                                
+                                <select id="state" name="state" class="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm bg-transparent rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" required>
+                                  <option value="">-- Select State --</option>
+                                  <option value="AL">Alabama</option>
+                                  <option value="AK">Alaska</option>
+                                  <option value="AZ">Arizona</option>
+                                  <option value="AR">Arkansas</option>
+                                  <option value="CA">California</option>
+                                  <option value="CO">Colorado</option>
+                                  <option value="CT">Connecticut</option>
+                                  <option value="DE">Delaware</option>
+                                  <option value="FL">Florida</option>
+                                  <option value="GA">Georgia</option>
+                                  <option value="HI">Hawaii</option>
+                                  <option value="ID">Idaho</option>
+                                  <option value="IL">Illinois</option>
+                                  <option value="IN">Indiana</option>
+                                  <option value="IA">Iowa</option>
+                                  <option value="KS">Kansas</option>
+                                  <option value="KY">Kentucky</option>
+                                  <option value="LA">Louisiana</option>
+                                  <option value="ME">Maine</option>
+                                  <option value="MD">Maryland</option>
+                                  <option value="MA">Massachusetts</option>
+                                  <option value="MI">Michigan</option>
+                                  <option value="MN">Minnesota</option>
+                                  <option value="MS">Mississippi</option>
+                                  <option value="MO">Missouri</option>
+                                  <option value="MT">Montana</option>
+                                  <option value="NE">Nebraska</option>
+                                  <option value="NV">Nevada</option>
+                                  <option value="NH">New Hampshire</option>
+                                  <option value="NJ">New Jersey</option>
+                                  <option value="NM">New Mexico</option>
+                                  <option value="NY">New York</option>
+                                  <option value="NC">North Carolina</option>
+                                  <option value="ND">North Dakota</option>
+                                  <option value="OH">Ohio</option>
+                                  <option value="OK">Oklahoma</option>
+                                  <option value="OR">Oregon</option>
+                                  <option value="PA">Pennsylvania</option>
+                                  <option value="RI">Rhode Island</option>
+                                  <option value="SC">South Carolina</option>
+                                  <option value="SD">South Dakota</option>
+                                  <option value="TN">Tennessee</option>
+                                  <option value="TX">Texas</option>
+                                  <option value="UT">Utah</option>
+                                  <option value="VT">Vermont</option>
+                                  <option value="VA">Virginia</option>
+                                  <option value="WA">Washington</option>
+                                  <option value="WV">West Virginia</option>
+                                  <option value="WI">Wisconsin</option>
+                                  <option value="WY">Wyoming</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="Country" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Country</label>
+                                <input tabindex="0" type="text" id="country" name="country" required class="border bg-transparent border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" value="United States" readonly placeholder="United States" />
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <div class="flex items-center pb-2">
+                                    <label for="ZIP" class="text-sm font-bold text-gray-800 dark:text-gray-100">ZIP/Postal Code</label>
+                                    <div class="ml-2 cursor-pointer text-gray-600 dark:text-gray-400">
+                                        <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4.svg" alt="info">
+                                        <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_form-svg4dark.svg" alt="info">
+                                    </div>
+                                </div>
+                                <input tabindex="0" type="text" name="zip" required id="zip"  class="bg-transparent border border-red-400 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 placeholder-gray-500 text-gray-600 dark:text-gray-400" placeholder="86745" />
+                                
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+            
+                                <div class="md:w-72 md:ml-12 md:mt-0">
+                                  <h4 class="text-center">Upload your state ID or Driver's License </h4>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="imageUpload1" class="text-sm font-bold text-gray-800 dark:text-gray-100" > Front </label>
+                                <input type="file" id="imageUpload1" name="files" class="mb-2 mt-2 form-control w-full p-3 mt-3 bg-gray-100 border rounded border-gray-200 focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" aria-labelledby="email" placeholder="" required/>
+                              </div>
+                            </div>
+                            <div class="flex items-center justify-center">
+                              <div class="xl:w-1/4 lg:w-1/2 md:w-1/2 flex flex-col mb-6">
+                                <label for="imageUpload2" class="text-sm font-bold text-gray-800 dark:text-gray-100 "  > Back </label>
+                                  <input type="file" id="imageUpload2" name="files" class="mb-2 mt-2 form-control w-full p-3 mt-3 bg-gray-100 border rounded border-gray-200 focus:outline-none focus:border-gray-600 text-sm font-medium leading-none text-gray-800" aria-labelledby="email" placeholder="Street" required/>
+                              </div>
+                            </div>
+                            <div class="md:flex  items-center justify-center lg:ml-24 lg:mt-0 mt-4">
+                              <div class="md:w-64 md:ml-12 md:mt-0 bg-gradient-to-b from-blue-400 to-gray-400 ">
+                                <button type="submit" class="btn bg-gradient-to-b from-blue-400 to-gray-400 " value="Upload">Submit</button>
+                              </div>
+                            </div> 
+                              
+                              
+                              
+                              
+
+                              
+                               
+                          </form>
+                      </div>
+                  </div>
+              </div>
+            </div>
+      
+      
+    
+    
+  
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  
+<%- include('partials/footer') -%>
+

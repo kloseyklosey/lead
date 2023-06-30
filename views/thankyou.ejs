@@ -1,0 +1,67 @@
+<%- include('partials/head') -%>
+
+<%- include('partials/header') -%>
+
+
+       
+<body class=" my-color mx-auto bg-gradient-to-b from-blue-400 to-green-400 w-full py-2 px-4">
+            <!-- <div class="container">
+                <h1>Thank You</h1>
+                <p>Thank you for submitting your information. your response has been recorded.</p>
+            </div> -->
+
+            
+    <div class="py-12 px-4">
+        <div id="button" class="hidden">
+          <div
+            class="container mx-auto flex justify-center items-center px-4 md:px-10 py-20 relative"
+          >
+            <button
+              onclick="openModal_modal_XVIII()"
+              class="bg-white text-gray-800 py-5 px-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white rounded"
+            >
+              Open Modal
+            </button>
+          </div>
+        </div>
+        <div
+          id="modal"
+          class="lg:max-w-[842px] md:max-w-[744px] max-w-[375px] w-full mx-auto bg-white lg:px-[109px] md:px-12 px-3 py-20 relative"
+        >
+          <div>
+            <svg
+              onclick="closeModal_modal_XVIII()"
+              class="cursor-pointer absolute right-4 top-4 z-10"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.28033 6.21967C6.98744 5.92678 6.51256 5.92678 6.21967 6.21967C5.92678 6.51256 5.92678 6.98744 6.21967 7.28033L10.9393 12L6.21967 16.7197C5.92678 17.0126 5.92678 17.4874 6.21967 17.7803C6.51256 18.0732 6.98744 18.0732 7.28033 17.7803L12 13.0607L16.7197 17.7803C17.0126 18.0732 17.4874 18.0732 17.7803 17.7803C18.0732 17.4874 18.0732 17.0126 17.7803 16.7197L13.0607 12L17.7803 7.28033C18.0732 6.98744 18.0732 6.51256 17.7803 6.21967C17.4874 5.92678 17.0126 5.92678 16.7197 6.21967L12 10.9393L7.28033 6.21967Z"
+                fill="#373737"
+              />
+            </svg>
+            <div>
+           
+              <h1 class="text-4xl font-bold text-center text-gray-800">Thank You</h1>
+            
+            </div>
+           
+              <p class="text-lg font-medium leading-none text-center text-gray-800 mt-10">Your response has been recorded.</p>
+  
+              
+          </div>
+        </div>
+      </div>
+    
+    
+</body>
+        
+        
+
+
+<%- include('partials/footer') -%>

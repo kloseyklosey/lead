@@ -1,0 +1,71 @@
+<%- include('partials/head') -%>
+
+
+<div class="mx-auto container bg-white dark:bg-gray-800 dark:bg-gray-800 shadow rounded">
+  <div class="flex flex-col lg:flex-row p-4 lg:p-8 justify-between items-start lg:items-stretch w-full">
+      
+  </div>
+  <div class="w-full overflow-x-scroll xl:overflow-x-hidden">
+      <table class="min-w-full bg-white dark:bg-gray-800">
+          <thead>
+              <tr class="w-full h-16 border-gray-300 border-b py-8">
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">FirstName</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">Middlename</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">LastName</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">Email</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">Socials</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">street</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">appt</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">city</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">state</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">zip</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">phone</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">ImageOne</th>
+                  <th role="columnheader" class="text-gray-600 dark:text-gray-400 font-normal pr-6 text-left text-sm tracking-normal leading-4">ImageTwo</th>
+              </tr>
+          </thead>
+          <tbody>  <% for(var i=0; i<posts.length; i++) {%>
+              <tr class="h-24 border-gray-300 border-b">
+              
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].firstName%> </td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].middleName%></td>
+                  
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].lastName%> </td>
+                  
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].email%></td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].socials%></td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].street%></td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].appt%></td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].city%></td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].state%></td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].zip%></td>
+                  <td class="text-sm pr-6 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4"><%= posts[i].phone%></td>
+                                
+                  <td class="pr-6 whitespace-no-wrap">
+                    <div class="flex items-center">
+                        <div class="h-8 w-8">
+                            <img src="<%= posts[i].imageOne%>" alt="" role="img" class="h-full w-full rounded-full overflow-hidden shadow" />
+                        </div>
+                   
+                    </div>
+                  </td>
+                  <td class="pr-6 whitespace-no-wrap">
+                    <div class="flex items-center">
+                        <div class="h-8 w-8">
+                            <img src="<%= posts[i].imageTwo%>" alt="" role="img" class="h-full w-full rounded-full overflow-hidden shadow" />
+                        </div>
+                     
+                    </div>
+                  </td>
+                  
+              </tr>
+              <% } %>
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
+
+
+<%- include('partials/footer') -%>

@@ -1,5 +1,5 @@
 {
-  "name": "Job Reg",
+  "name": "Job-Reg",
   "version": "1.0.0",
   "description": "An app for vendors, Vendors can upload pictures and descriptions of service and Users can search vendors",
   "main": "server.js",

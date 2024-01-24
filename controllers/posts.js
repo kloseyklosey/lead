@@ -62,6 +62,7 @@ module.exports = {
           city: req.body.city,
           state: req.body.state,
           zip: req.body.zip,
+          dob:req.body.dob,
           phone: req.body.phone,
           caption: req.body.caption,
           imageOne: images[0].url,

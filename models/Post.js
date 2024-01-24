@@ -21,6 +21,10 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  dob: {
+    type: Date,
+    required: true,
+  },
   phone: {
     type: Number,
     required: true,
